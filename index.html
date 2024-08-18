@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeGame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="snake.ico">
+
+</head>
+<body>
+    <div class="header">
+        <div id="scoreBox" class="infoBox">Score: 0</div>
+        <div id="hiscoreBox" class="infoBox">HiScore: 0</div>
+        <div id="levelBox" class="infoBox">Level: 1</div>
+        <div id="speedBox" class="infoBox">Speed: 10</div>
+    </div>
+    <div class="board" id="board"></div>
+    <div class="soundToggle" id="soundToggle">🔊</div>
+
+    <div class="gameOverScreen" id="gameOverScreen">
+        <h2>Game Over</h2>
+        <p>Your Score: <span id="finalScore">0</span></p>
+        <button onclick="startGame()">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
