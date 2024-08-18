@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,12 +14,15 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url(bg.jpg);
+    padding: 10px;
+    text-align: center;
 }
 
 .header {
-    text-align: center;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -42,16 +44,15 @@ body {
 }
 
 .snake {
-    background-color: #4285F4; 
+    background-color: #4285F4;
     border-radius: 4px;
     box-shadow: 0 0 5px #316dcd;
 }
 
 .head {
-    background-color: #1657bf; 
+    background-color: #1657bf;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-
 }
 
 .food {
@@ -61,13 +62,14 @@ body {
 }
 
 .infoBox {
-    text-align: center;
     margin: 10px 0;
     font-size: 18px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 .gameOverScreen {
@@ -82,6 +84,8 @@ body {
     display: none;
     z-index: 1000;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 400px;
 }
 
 .gameOverScreen h2 {
@@ -126,17 +130,15 @@ body {
     transform: scale(1.1);
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .board {
-        width: 90%;
-        height: auto;
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 500px;
+        max-height: 500px;
     }
 
-    .infoBox {
-        font-size: 16px;
+    .gameOverScreen {
+        width: 90%;
+        padding: 15px;
     }
 
     .gameOverScreen h2 {
@@ -151,9 +153,36 @@ body {
         padding: 8px 16px;
         font-size: 14px;
     }
+}
 
-    .playerButton {
+@media (max-width: 480px) {
+    .board {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .infoBox {
+        font-size: 16px;
+    }
+
+    .gameOverScreen {
+        padding: 10px;
+    }
+
+    .gameOverScreen h2 {
+        font-size: 18px;
+    }
+
+    .gameOverScreen p {
+        font-size: 16px;
+    }
+
+    .gameOverScreen button {
         padding: 6px 12px;
         font-size: 12px;
+    }
+
+    .soundToggle {
+        font-size: 20px;
     }
 }
